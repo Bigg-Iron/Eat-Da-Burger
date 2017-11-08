@@ -1,17 +1,19 @@
 <h1>Hamburgers and Handlebars!</h1>
 <h2>Handleburgers!</h2>
 <ul>
-  {{#each handleburgers}}
+  {{#each burger}}
     {{#unless devoured}}
-      {{> handleburgers/handleburger-block devoured=true}}
+    <p>burger here</p>
+      {{!-- {{> burger/burger-block devoured=true}} --}}
     {{/unless}}
   {{/each}}
 </ul>
-<h2>handleburgers that are delicious!</h2>
+<h2>Handleburgers that are delicious!</h2>
 <ul>
-  {{#each handleburgers}}
+  {{#each burger}}
     {{#if devoured}}
-      {{> handleburgers/handleburger-block devoured=false}}
+    <p>burger here</p>
+      {{!-- {{> burger/burger-block devoured=false}} --}}
     {{/if}}
   {{/each}}
 </ul>
