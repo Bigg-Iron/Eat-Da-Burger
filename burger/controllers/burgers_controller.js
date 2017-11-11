@@ -1,3 +1,5 @@
+import { log } from 'util';
+
 var express = require('express');
 
 var burger = require('../models/burger.js')
@@ -37,6 +39,12 @@ router.get("/", function(req, res) {
     console.log("condition", condition);
     burger.update({
       devoured: req.body.devoured
+      console.log(req.body);
+      
+      
+      
+      
+      
     }, condition, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
