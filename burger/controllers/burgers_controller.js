@@ -1,4 +1,4 @@
-import { log } from 'util';
+// import { log } from 'util';
 
 var express = require('express');
 
@@ -39,11 +39,8 @@ router.get("/", function(req, res) {
     console.log("condition", condition);
     burger.update({
       devoured: req.body.devoured
-      console.log(req.body);
-      
-      
-      
-      
+      // console.log(req.body);
+    
       
     }, condition, function(result) {
       if (result.changedRows == 0) {
