@@ -33,13 +33,13 @@ router.get("/", function(req, res) {
     });
   });
 
-
+  
   router.put("/api/burgers/:id", function(req, res) {
+    console.log(req.body);
     var condition = "id = " + req.params.id;
     console.log("condition", condition);
     burger.update({
       devoured: req.body.devoured
-      // console.log(req.body);
     
       
     }, condition, function(result) {
